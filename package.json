@@ -1,0 +1,31 @@
+{
+  "name": "phone-validator-net",
+  "version": "1.0.1",
+  "description": "A simple wrapper class for the phone-validator.net API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "dependencies": {
+    "unirest": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janek26/phone-validator-net.git"
+  },
+  "keywords": [
+    "node",
+    "phone",
+    "validator",
+    "validator",
+    "net",
+    "api",
+    "rest"
+  ],
+  "author": "Janek Rahrt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janek26/phone-validator-net/issues"
+  },
+  "homepage": "https://github.com/janek26/phone-validator-net#readme"
+}
