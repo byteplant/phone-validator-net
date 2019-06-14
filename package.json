@@ -1,7 +1,7 @@
 {
   "name": "phone-validator-net",
-  "version": "2.0.0",
-  "description": "A simple wrapper for the phone-validator.net API",
+  "version": "2.0.1",
+  "description": "A wrapper for the phone-validator.net API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Janek Rahrt <janek.rahrt@me.com>",
