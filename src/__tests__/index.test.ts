@@ -1,7 +1,14 @@
 import PhoneValidator from '..'
 
-const WORKING_APIKEY = 'pv-72529d9a6f4a94b56e26b5a9d39b60e9'
-const PHONE119 = '01728150130'
+const { WORKING_APIKEY } = process.env
+const PHONE = '01728150130'
+const PHONE_ES = '934124602'
+
+if (WORKING_APIKEY === undefined) {
+  throw Error(
+    `'WORKING_APIKEY' needs to be provided using environment variables`,
+  )
+}
 
 test('Create instance of PhoneValidator', () => {
   expect(() => PhoneValidator('')).toThrow()
@@ -9,10 +16,10 @@ test('Create instance of PhoneValidator', () => {
   expect(PhoneValidator(WORKING_APIKEY)).toBeInstanceOf(Function)
 })
 
-test('Use instance to check eMails', async () => {
+test('Use instance to check phone number', async () => {
   const instance = PhoneValidator(WORKING_APIKEY)
   const call = instance({
-    phone: PHONE119,
+    phone: PHONE,
   })
 
   expect(call).toBeInstanceOf(Promise)
@@ -20,20 +27,26 @@ test('Use instance to check eMails', async () => {
   const response = await call
 
   expect(response).toMatchObject({
-    ratelimit_remain: 0,
-    ratelimit_seconds: 1,
-    status: 'API_KEY_INVALID_OR_DEPLETED',
+    countrycode: 'DE',
+    formatinternational: '+49 172 8150130',
+    formatnational: '0172 8150130',
+    linetype: 'MOBILE',
+    location: 'Germany',
+    status: 'VALID_CONFIRMED',
   })
 
   const response2 = await instance({
     countrycode: 'es',
     mode: 'express',
-    phone: PHONE119,
+    phone: PHONE_ES,
   })
 
   expect(response2).toMatchObject({
-    ratelimit_remain: 0,
-    ratelimit_seconds: 1,
-    status: 'API_KEY_INVALID_OR_DEPLETED',
+    countrycode: 'ES',
+    formatinternational: '+34 934 12 46 02',
+    formatnational: '934 12 46 02',
+    linetype: 'FIXED_LINE',
+    location: 'Barcelona',
+    status: 'VALID_UNCONFIRMED',
   })
 })
