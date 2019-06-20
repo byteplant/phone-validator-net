@@ -8,4 +8,5 @@ test('isValidAPIKey', () => {
   expect(isValidAPIKey('pv-df799342fa9405da27916bcc96e46a5e')).toBe(true)
   expect(isValidAPIKey('pv-cd180873104fe2eb1edb20297b8d024e')).toBe(true)
   expect(isValidAPIKey('pv-416b1aa14fd1d8bed9b53979bbb64293')).toBe(true)
+  expect(isValidAPIKey('df-416b1aa14fd1d8bed9b53979bbb64293')).toBe(true)
 })
