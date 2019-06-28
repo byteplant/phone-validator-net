@@ -1,6 +1,6 @@
 # phone-validator-net
 
-A small library providing a wrapper for [api.phone-validator.net](http://www.phone-validator.net/telefon-nummer-online-ueberpruefen-api.html)
+A small library providing a wrapper for [api.phone-validator.net](https://www.phone-validator.net/api.html)
 
 ## Installation
 
@@ -17,7 +17,7 @@ import PhoneValidator from 'phone-validator-net'
 const validatorInstance = PhoneValidator(YOUR_API_KEY)
 
 const responseObject = await validatorInstance(phoneObject) //validates phone object
-//phone is a objekt like
+//phone is an object like
 // {
 //   number: "+49173xxxxxxxxx",  //phone number to validate (string) | 0173xxxxxxx also possible with country code
 //   countrycode: "de",        //two letter ISO 3166-1 country code (string) [optional]
@@ -35,7 +35,7 @@ const responseObject = await validatorInstance(phoneObject) //validates phone ob
     formatinternational	  phone number in international format
   }
 
-  => http://www.phone-validator.net/telefon-nummer-online-ueberpruefen-api.html
+  => https://www.phone-validator.net/api.html
 */
 });
 ```

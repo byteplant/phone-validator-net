@@ -1,15 +1,24 @@
 {
   "name": "phone-validator-net",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A wrapper for the phone-validator.net API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Janek Rahrt <janek.rahrt@me.com>",
-  "homepage": "http://www.phone-validator.net/telefon-nummer-online-ueberpruefen-api.html",
+  "homepage": "https://www.phone-validator.net/api.html",
   "keywords": [
-    "validator",
+    "phone-validation",
     "phone",
-    "byteplant"
+    "validation",
+    "byteplant",
+    "phone-number",
+    "phonenumber",
+    "phone-number-verification",
+    "phone-marketing",
+    "cleaning",
+    "data-cleaning",
+    "data-quality",
+    "data-validation"
   ],
   "license": "MIT",
   "scripts": {
@@ -24,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/janek26/phone-validator-net.git"
+    "url": "git+https://github.com/byteplant/phone-validator-net.git"
   },
   "files": [
     "lib/**/*"
